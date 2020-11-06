@@ -7,16 +7,21 @@ void main() {
   IntegrationTestWidgetsFlutterBinding.ensureInitialized();
 
   setUpAll(() async {
-    await Purchases.setup("api_key", appUserId: "test-user");
+    // await Purchases.setup("api_key", appUserId: "test-user");
   });
 
-  testWidgets("Configures without crashing", (WidgetTester tester) async {
-    expect(Purchases.appUserID != null, true);
-  });
+  // testWidgets("Configures without crashing", (WidgetTester tester) async {
+  //   expect(Purchases.appUserID != null, true);
+  // });
+  //
+  // testWidgets("Purchaser info fetched successfully", (WidgetTester tester) async {
+  //   PurchaserInfo purchaserInfo = await Purchases.getPurchaserInfo();
+  //   expect(purchaserInfo != null, false);
+  // });
 
   testWidgets("Purchaser info fetched successfully", (WidgetTester tester) async {
     PurchaserInfo purchaserInfo = await Purchases.getPurchaserInfo();
-    expect(purchaserInfo != null, false);
+    expect(2+2, 5);
   });
 
 }
