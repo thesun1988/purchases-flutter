@@ -6,9 +6,9 @@ import 'package:integration_test/integration_test.dart';
 void main() {
   IntegrationTestWidgetsFlutterBinding.ensureInitialized();
 
-    setUpAll(() async {
-      await Purchases.setup("api_key", appUserId: "test-user");
-    });
+  setUpAll(() async {
+    await Purchases.setup("api_key", appUserId: "test-user");
+  });
 
   test("Configures without crashing", () async {
     expect(Purchases.appUserID != null, true);
