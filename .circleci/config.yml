@@ -157,7 +157,9 @@ jobs:
 #      - setup-flutter
 #      - android-sdk-dependencies
 #      - create-launch-android-emulator
-      - prepare-tests
+      - run:
+          name: Change api key
+          command: sed -i s/api_key/$API_KEY/ example/integration_test/app_test.dart
       - run:
           working_directory: example/android
           command: |
