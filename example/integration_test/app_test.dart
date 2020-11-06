@@ -20,7 +20,7 @@ void main() {
   // });
 
   testWidgets("Purchaser info fetched successfully", (WidgetTester tester) async {
-    PurchaserInfo purchaserInfo = await Purchases.getPurchaserInfo();
+    // PurchaserInfo purchaserInfo = await Purchases.getPurchaserInfo();
     expect(2+2, 5);
   });
 
