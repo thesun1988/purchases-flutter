@@ -10,12 +10,13 @@ void main() {
     await Purchases.setup("api_key", appUserId: "test-user");
   });
 
-  test("Configures without crashing", () async {
+  testWidgets("Configures without crashing", (WidgetTester tester) async {
     expect(Purchases.appUserID != null, true);
   });
 
-  test("Purchaser info fetched successfully", () async {
+  testWidgets("Purchaser info fetched successfully", (WidgetTester tester) async {
     PurchaserInfo purchaserInfo = await Purchases.getPurchaserInfo();
     expect(purchaserInfo != null, false);
   });
+
 }
