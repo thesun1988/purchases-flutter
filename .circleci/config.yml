@@ -206,8 +206,8 @@ jobs:
           name: Test with Firebase Test Lab
           command: >
             gcloud firebase test android run --type instrumentation \
-              --app example/android/build/app/outputs/apk/debug/app-debug.apk \
-              --test example/android/build/app/outputs/apk/androidTest/debug/app-debug-androidTest.apk \
+              --app example/build/app/outputs/apk/debug/app-debug.apk \
+              --test example/build/app/outputs/apk/androidTest/debug/app-debug-androidTest.apk \
               --timeout 2m \
               --results-bucket cloud-test-${GOOGLE_PROJECT_ID}
       - run:
