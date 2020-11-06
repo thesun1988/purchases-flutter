@@ -1,4 +1,4 @@
-package com.revenuecat.purchases_flutter_example;
+package com.revenuecat.purchases_sample;
 
 import androidx.test.rule.ActivityTestRule;
 
